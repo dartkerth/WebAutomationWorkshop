@@ -1,18 +1,28 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="example test suite" verbose="1">
-	<test name="example run">
-		<groups>
+<suite name="Workshop Suite 1" verbose="1">
+	<test name="Account Creation">
+		 <groups>
 			<run>
-				<include name="group1"></include>
+				<include name="createAccount"> </include>
 			</run>
 		</groups>
 		<classes>
-			<class name="com.globant.web.tests.Example">
-				<methods>
-					<exclude name="goodbye"></exclude>
-				</methods>
-			</class>
+			<class name="com.globant.web.tests.Example"> </class>
+			<class name="com.globant.web.tests.Subscribe"> </class>
+		</classes>
+	</test>
+	<test name="Cancel Subscription">
+		<groups>
+			<run>
+				<include name="cancelSubscription"> </include>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.globant.web.tests.Example"> </class>
+			<class name="com.globant.web.tests.Subscribe"> </class>
 		</classes>
 	</test>
 </suite>
+
+

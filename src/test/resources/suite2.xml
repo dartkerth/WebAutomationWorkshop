@@ -2,9 +2,8 @@
 
 <suite name="example test suite" verbose="1">
 	<test name="example run">
-
 		<classes>
-			<class name="com.globant.web.tests.Example"></class>
+			<class name="com.globant.web.tests.Subscribe"> </class>
 		</classes>
 	</test>
 </suite>

@@ -15,9 +15,9 @@ public class Example {
 
     public Logger log = Logger.getLogger(Example.class);
 
-    @BeforeSuite
+    @BeforeSuite(groups = {"createAccount", "cancelSubscription"})
     public void beforeSuite() {
-        log.info ("Before Suite");
+        log.info ("Open Browser");
     }
 
     @BeforeClass
@@ -25,9 +25,9 @@ public class Example {
         log.info ("Before Class");
     }
 
-    @BeforeTest
+    @BeforeTest(groups = {"createAccount", "cancelSubscription"})
     public void beforeTest() {
-        log.info ("Before Test");
+        log.info ("Navigate to main page");
     }
 
     @BeforeMethod
@@ -35,9 +35,9 @@ public class Example {
         log.info ("Before Method");
     }
 
-    @AfterSuite
+    @AfterSuite(groups = {"createAccount", "cancelSubscription"})
     public void afterSuite() {
-            log.info ("After Suite");
+            log.info ("Close Browser");
     }
 
     @AfterClass
@@ -45,9 +45,9 @@ public class Example {
         log.info ("After Class");
     }
 
-    @AfterTest
+    @AfterTest(groups = {"createAccount", "cancelSubscription"})
     public void afterTest() {
-        log.info ("After Test");
+        log.info ("Click on Log Out");
     }
 
     @AfterMethod
